@@ -1,0 +1,23 @@
+header{
+  background-color: rgb(131, 0, 0);
+  display: flex;
+  justify-content: space-around !important;
+  padding: 1rem;
+}
+
+header .favoritos{
+  color: white;
+  text-decoration: none;
+  background-color: rgb(214, 87, 13);
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+header .logo{
+  background-color: transparent;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: white;
+}
