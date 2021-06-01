@@ -1,7 +1,9 @@
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
-import Favoritos from './pages/Favoritos'
+import Favoritos from './pages/Favorites';
+import Filme from './pages/Filme';
+import Erro from './pages/Error'
  
 const Routes = () => {
   return(
@@ -10,6 +12,8 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/favoritos" component={Favoritos}/>
+        <Route exact path="/filme/:id" component={Filme} />
+        <Route path="*" component={Erro} />
       </Switch>
     </BrowserRouter>
   )

@@ -17,12 +17,12 @@ function Home() {
   return (
     <div>
       {filmes.map(filme => {
-        const { foto, nome, sinopse, id } = filme
+        const { foto, nome, id } = filme
         return (
           <article className="container" key={id}>
             <h1 className="titulo">{nome}</h1>
             <img className="img" src={foto} alt="foto" />
-            <Link to="/" className="acessar">Acessar</Link>
+            <Link to={`/filme/${id}`} className="acessar">Acessar</Link>
           </article>
         )
       })}
