@@ -38,13 +38,18 @@ function Filme() {
     )
   }
   return (
-    <div key={filme.id}>
-      <h1>{filme.nome}</h1>
-      <img src={filme.foto} alt={filme.nome} />
+    <div key={filme.id} className="container-info">
+      <h1 className="titulo-info">{filme.nome}</h1>
+      <img className="img-info" src={filme.foto} alt={filme.nome} />
       <strong>Sinopse</strong>
-      <p>{filme.sinopse}</p>
-      <button>Salvar</button>
-      <button>Trailer</button>
+      <p className="paragraph">{filme.sinopse}</p>
+      <div className="btns">
+        <button>Salvar</button>
+        <a className="trailer"
+          href={`https://youtube.com/results?search_query=${filme.nome} Trailer`}
+          target="blank"
+        >Trailer</a>
+      </div>
     </div>
   )
 }

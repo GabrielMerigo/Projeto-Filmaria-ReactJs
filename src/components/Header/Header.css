@@ -1,8 +1,8 @@
 header{
   background-color: rgb(131, 0, 0);
   display: flex;
-  justify-content: space-around !important;
-  padding: 1rem;
+  justify-content: space-between !important;
+  height: 4rem;
 }
 
 header .favoritos{
@@ -16,7 +16,6 @@ header .favoritos{
 }
 
 header .logo{
-  background-color: transparent;
   font-size: 1.7rem;
   text-decoration: none;
   color: white;

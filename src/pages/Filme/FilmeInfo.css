@@ -1,0 +1,54 @@
+.container-info{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  width: 60rem;
+  text-align: left;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.titulo-info{
+  margin: 0.5rem 0;
+}
+
+.img-info{
+  border-radius: 0.5rem;
+  max-height: 21rem;
+}
+
+strong{
+  margin: 0.5rem 0;
+}
+
+.btns{
+  display: flex;
+  flex-direction: row;
+}
+
+.paragraph{
+  font-size: 0.9rem;
+}
+
+.btns button, a.trailer{
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #ccc;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+
+.btns button:hover{
+  color:white;
+  background-color: brown;
+  cursor: pointer;
+}
+.btns a:hover{
+  color:white;
+  background-color: brown;
+  cursor: pointer;
+}
