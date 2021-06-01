@@ -1,21 +1,31 @@
 import { useEffect, useState } from 'react'
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
+import '../Home/Home.css';
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
   useEffect(() => {
-    
-    async function loadFilmes(){
+    async function loadFilmes() {
       const { data } = await api.get('r-api/?api=filmes')
+      setFilmes(data)
     }
     loadFilmes()
 
   }, [])
-  console.log(filmes);
 
   return (
-    <div className="app">
-      <h1>Pagina Home</h1>
+    <div>
+      {filmes.map(filme => {
+        const { foto, nome, sinopse, id } = filme
+        return (
+          <article className="container" key={id}>
+            <h1 className="titulo">{nome}</h1>
+            <img className="img" src={foto} alt="foto" />
+            <Link to="/" className="acessar">Acessar</Link>
+          </article>
+        )
+      })}
     </div>
   );
 }
