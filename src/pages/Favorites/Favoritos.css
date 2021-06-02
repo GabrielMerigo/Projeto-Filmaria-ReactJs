@@ -1,0 +1,15 @@
+.tituloFavorito{
+  padding-top: 1rem;
+}
+
+.filme{
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  max-width: 20rem;
+  margin: 1rem auto;
+}
+
+.complements a{
+  margin-right: 1rem;
+}
