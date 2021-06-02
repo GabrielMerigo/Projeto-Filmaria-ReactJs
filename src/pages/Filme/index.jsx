@@ -37,6 +37,11 @@ function Filme() {
       </div>
     )
   }
+
+  function salvarFilme(){
+    
+  }
+
   return (
     <div key={filme.id} className="container-info">
       <h1 className="titulo-info">{filme.nome}</h1>
@@ -44,7 +49,7 @@ function Filme() {
       <strong>Sinopse</strong>
       <p className="paragraph">{filme.sinopse}</p>
       <div className="btns">
-        <button>Salvar</button>
+        <button onClick={salvarFilme}>Salvar</button>
         <a className="trailer"
           href={`https://youtube.com/results?search_query=${filme.nome} Trailer`}
           target="blank"
