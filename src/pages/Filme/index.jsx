@@ -39,9 +39,21 @@ function Filme() {
   }
 
   function salvarFilme(){
-    
-  }
+    const minhaLista = localStorage.getItem('filmes');
+    let filmesSalvos = JSON.parse(minhaLista) || [];
+    console.log(filmesSalvos);
 
+    const hasFilme = filmesSalvos.some(filmeAtual => filmeAtual.id === filme.id)
+
+    if(hasFilme){
+      alert('Você já possui esse filme na sua lista.')
+      return
+    }
+
+    filmesSalvos.push(filme)
+    localStorage.setItem('filmes', JSON.stringify(filmesSalvos))
+  }
+  
   return (
     <div key={filme.id} className="container-info">
       <h1 className="titulo-info">{filme.nome}</h1>
@@ -58,5 +70,6 @@ function Filme() {
     </div>
   )
 }
+
 
 export default Filme
