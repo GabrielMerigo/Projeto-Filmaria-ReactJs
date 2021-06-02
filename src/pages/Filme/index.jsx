@@ -2,6 +2,7 @@ import '../Filme/FilmeInfo.css'
 import { useEffect, useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom';
 import api from '../../services/api'
+import { toast } from 'react-toastify';
 
 function Filme() {
   const { id } = useParams()
@@ -41,17 +42,17 @@ function Filme() {
   function salvarFilme(){
     const minhaLista = localStorage.getItem('filmes');
     let filmesSalvos = JSON.parse(minhaLista) || [];
-    console.log(filmesSalvos);
 
     const hasFilme = filmesSalvos.some(filmeAtual => filmeAtual.id === filme.id)
 
     if(hasFilme){
-      alert('Você já possui esse filme na sua lista.')
+      toast.error('Você já possui esse filme na sua lista.')
       return
     }
-
+    
     filmesSalvos.push(filme)
     localStorage.setItem('filmes', JSON.stringify(filmesSalvos))
+    toast.success('Filme salvo com sucesso.')
   }
   
   return (
