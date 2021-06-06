@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { Link } from 'react-router-dom'
-import '../Home/Home.css';
+import { Container, Titulo, Img } from '../../styles'
 
 function Home() {
   const [filmes, setFilmes] = useState([]);
@@ -19,11 +19,11 @@ function Home() {
       {filmes.map(filme => {
         const { foto, nome, id } = filme
         return (
-          <article className="container" key={id}>
-            <h1 className="titulo">{nome}</h1>
-            <img className="img" src={foto} alt="foto" />
+          <Container key={id}>
+            <Titulo cor="ccc">{nome}</Titulo>
+            <Img className="img" src={foto} alt="foto" />
             <Link to={`/filme/${id}`} className="acessar">Acessar</Link>
-          </article>
+          </Container>
         )
       })}
     </div>
