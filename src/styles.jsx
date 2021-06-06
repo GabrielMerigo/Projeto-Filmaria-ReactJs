@@ -20,7 +20,7 @@ export const Container = styled.div`
 `
 
 export const Titulo = styled.h1`
-  font-size: 3rem;
+  font-size: ${props => `${props.tamanho}rem`};
   color: ${props => `#${props.cor}`};
   padding-bottom: 0.5rem;
   font-family: Arial, Helvetica, sans-serif;

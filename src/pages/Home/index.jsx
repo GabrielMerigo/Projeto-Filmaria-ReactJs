@@ -20,7 +20,7 @@ function Home() {
         const { foto, nome, id } = filme
         return (
           <Container key={id}>
-            <Titulo cor="ccc">{nome}</Titulo>
+            <Titulo tamanho={12} cor="ccc">{nome}</Titulo>
             <Img className="img" src={foto} alt="foto" />
             <Link to={`/filme/${id}`} className="acessar">Acessar</Link>
           </Container>
